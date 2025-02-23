@@ -2,7 +2,7 @@
 \label{chap:project}
 
 \textit{Peer Network} supporta le aziende nella revisione e reingegnerizzazione dei processi aziendali, adottando un
-approccio basato su \textbf{processi componibili}, un esempio è presente in \Cref{fig:composable-process}. Questo approccio
+approccio basato su \textbf{processi componibili}, un esempio è presente in Figura \ref{fig:composable-process}. Questo approccio
 supera i limiti dei sistemi monolitici tradizionali, introducendo moduli autonomi, riutilizzabili e facilmente
 combinabili, che garantiscono flessibilità e adattabilità di fronte ai cambiamenti operativi.
 
@@ -25,8 +25,8 @@ e ben definito del dominio, facilitando la gestione e l’organizzazione dei pro
 
 All’interno di ciascun Bounded Context, gli oggetti di business vengono implementati come \textbf{\ac{PBC}}.
 Queste unità modulari e riutilizzabili rappresentano specifiche entità aziendali che racchiudono in sé i dati e le azioni che
-si possono compiere su di esse in un formato indipendente e facilmente integrabile. Come schematizzato nella \Cref{fig:pbc-struttura}
-e nell’esempio in \Cref{fig:composable-process}, ciascuna \ac{PBC} descritta nelle ricerche di \textit{Gartner}\cite{natis2019innovation}\cite{burke2020top} include:
+si possono compiere su di esse in un formato indipendente e facilmente integrabile. Come schematizzato nella Figura \ref{fig:pbc-struttura}
+e nell’esempio in Figura \ref{fig:composable-process}, ciascuna \ac{PBC} descritta nelle ricerche di \textit{Gartner}\cite{natis2019innovation}\cite{burke2020top} include:
 
 \begin{itemize}
     \item una \textbf{struttura dati} per rappresentare le informazioni associate alla \ac{PBC},
@@ -89,7 +89,7 @@ che spesso vengono percepiti come un rallentamento delle attività.
 
 Per affrontare queste problematiche, l’azienda ha deciso di uniformare il più possibile la gestione dei progetti, adottando un approccio standardizzato
 per l’intero ciclo di vita. Basandosi sui principi del \textbf{\ac{PMBOK}}\cite{project2021guide}, i project manager hanno quindi elaborato lo schema
-del ciclo di vita ideale di un progetto in \textit{Peer Network}, riportato in \Cref{fig:fasi-progettuali}. Le future modifiche nella gestione dovranno
+del ciclo di vita ideale di un progetto in \textit{Peer Network}, riportato in Figura \ref{fig:fasi-progettuali}. Le future modifiche nella gestione dovranno
 progressivamente allinearsi a questo modello.
 
 Il ciclo di vita del progetto è stato suddiviso in tre fasi principali. La prima, denominata “Idea, Design, Economics”, prevede l’analisi iniziale di un
@@ -118,7 +118,7 @@ alla gestione complessiva dell'azienda.
 
 Per anni, il processo di fatturazione aziendale è stato gestito in modo poco strutturato e senza strumenti specifici, richiedendo circa due settimane
 di lavoro mensile, oltre ad un contributo rilevante da parte dei project manager. Sebbene parzialmente automatizzato tramite il software Knime\footnote{https://www.knime.com},
-il flusso di lavoro, illustrato in parte nella \Cref{fig:fatturazione-knime}, richiedeva una significativa supervisione manuale per avviare e monitorare ciascuna fase.
+il flusso di lavoro, illustrato in parte nella Figura \ref{fig:fatturazione-knime}, richiedeva una significativa supervisione manuale per avviare e monitorare ciascuna fase.
 Inoltre, il processo prevedeva frequenti operazioni manuali di importazione ed esportazione di dati tramite diversi fogli elettronici Google
 Sheet\footnote{https://workspace.google.com/intl/it/products/sheets/}.
 
@@ -131,7 +131,7 @@ Sheet\footnote{https://workspace.google.com/intl/it/products/sheets/}.
 
 Questo processo risultava troppo dispendioso in termini di tempo ed era basato su numerosi passaggi manuali. Per affrontare queste criticità, a gennaio 2024
 è stato avviato il progetto interno \ac{PAM}, partendo con l’obiettivo di automatizzare gran parte del processo di fatturazione.
-Le attività e il loro ordine di esecuzione sono schematizzate nella \Cref{fig:fatturazione}.
+Le attività e il loro ordine di esecuzione sono schematizzate nella Figura \ref{fig:fatturazione}.
 
 A partire da ottobre 2024, è stata resa disponibile la prima versione del sistema, che consente di completare l’intero flusso dal passaggio “estrazione dati
 per PM” alla “generazione dei rapportini,” in poche ore anziché nelle circa due settimane precedentemente necessarie. L’utilizzo dei fogli elettronici da creare,
@@ -154,5 +154,5 @@ possibilità di consultare tutte le prefatture emesse.
 Queste funzionalità semplificheranno notevolmente il lavoro degli utilizzatori, offrendo un unico punto di accesso per monitorare tutte le informazioni e mantenere
 sotto controllo l’andamento dei progetti. Inoltre, la nuova gestione economica, sia generale che dettagliata, eliminerà la necessità di utilizzare i fogli elettronici
 attualmente impiegati. Al momento, per ogni progetto viene creato un file separato per ogni anno solare, che deve essere aggiornato manualmente (come ultima fase del
-processo di fatturazione nella \Cref{fig:fatturazione}) con i dati relativi a costi e ricavi effettivi, ricavi previsti per i mesi successivi e margini. Con la nuova area
+processo di fatturazione nella Figura \ref{fig:fatturazione}) con i dati relativi a costi e ricavi effettivi, ricavi previsti per i mesi successivi e margini. Con la nuova area
 Progetti, queste operazioni saranno automatizzate e integrate direttamente nell’applicativo.
