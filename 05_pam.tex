@@ -29,7 +29,7 @@ soluzione è composta da:
     \item componenti backend, che integrano servizi e dati distribuiti su più piattaforme. Questa parte
     comprende inoltre la piattaforma di integrazione \ac{ESI}, responsabile della gestione delle \ac{PBC}
     necessarie;
-    \item componenti frontend, sviluppati e successivamente distribuiti tramite la piattaforma Liferay\footnote{https://www.liferay.com/it/home}.
+    \item componenti frontend, sviluppati e successivamente distribuiti tramite la piattaforma Liferay\footnote{\url{https://www.liferay.com/it/home}}.
 \end{itemize}
 
 \begin{figure}
@@ -62,13 +62,13 @@ Dal punto di vista tecnico, ogni \ac{SBS} è composta da:
                 \item custom: realizzate per esigenze specifiche e applicazioni dedicate. Nella Figura \ref{fig:sbs-sap} sono rappresentate dai cubi
                 arancioni del livello PBC Repository.
             \end{itemize}
-            Le \ac{PBC} sono implementate come microservizi scritti in Kotlin\footnote{https://kotlinlang.org} e distribuite come container
-            Docker\footnote{https://www.docker.com}, ciascuno contenente un gruppo coerente di \ac{PBC}. Ad esempio, G02 MATERIALS è il gruppo con
+            Le \ac{PBC} sono implementate come microservizi scritti in Kotlin\footnote{\url{https://kotlinlang.org}} e distribuite come container
+            Docker\footnote{\url{https://www.docker.com}}, ciascuno contenente un gruppo coerente di \ac{PBC}. Ad esempio, G02 MATERIALS è il gruppo con
             funzionalità relative ai materiali, come il tipo di materiale PBC 0208 MATTYPE, la lista dei
             prezzi dei materiali PBC 0217 MATPRICELIST e l’unità di misura dei materiali PBC 0222 UNITOFMEASURE.
             In uno scenario on-premise (installazione presso il data-center del cliente), i
             microservizi sono orchestrati tramite Docker Compose. In uno scenario on-cloud, i
-            microservizi vengono gestiti tramite Kubernetes\footnote{https://kubernetes.io}.
+            microservizi vengono gestiti tramite Kubernetes\footnote{\url{https://kubernetes.io}}.
         \end{itemize}
     \item una parte di \textbf{frontend} chiamata \textbf{Composable layer}: è dedicata all’esperienza utente, il quale interagisce con
     la soluzione attraverso un'applicazione web.
@@ -111,7 +111,7 @@ attraverso due diversi livelli:
         \item un modulo di backend che comprende:
         \begin{itemize}
             \item la base dati: come piattaforma per il database viene usato MySQL ed è installato presso il
-            cloud provider OVH\footnote{https://www.ovhcloud.com} su una macchina proprietaria;
+            cloud provider OVH\footnote{\url{https://www.ovhcloud.com}} su una macchina proprietaria;
             \item le logiche che interagiscono con la base dati e i servizi relativi, viene usato
             \ac{ESI} non-SAP (installato presso il cloud provider OVH su una macchina proprietaria) come
             strumento di esposizione dei servizi e integrazione con le componenti di frontend.
