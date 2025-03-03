@@ -21,10 +21,10 @@ caso specifico di \ac{SBS}. Poiché \ac{PAM} e le \ac{SBS} condividono la stessa
 concetti.
 
 \section{Struttura di una Smart Business Solution}
-\textit{Peer Network} utilizza Figura \ref{fig:sbs} e Figura \ref{fig:sbs-sap} per mostrare l'organizzazione delle
-applicazioni componibili che sviluppa,
-chiamate \ac{SBS} e progettate per diversi clienti e settori. Ciascuna
-soluzione è composta da:
+La \textit{Peer Network} ha sviluppato gli schemi riportati in Figura \ref{fig:sbs} e Figura \ref{fig:sbs-sap}
+per illustrare, all'interno della propria comunicazione, l’organizzazione delle applicazioni componibili che realizza.
+Queste, denominate \ac{SBS}, sono progettate per clienti appartenenti a diversi settori.
+Ciascuna soluzione è composta da:
 \begin{itemize}
     \item componenti backend, che integrano servizi e dati distribuiti su più piattaforme. Questa parte
     comprende inoltre la piattaforma di integrazione \ac{ESI}, responsabile della gestione delle \ac{PBC}
@@ -35,7 +35,7 @@ soluzione è composta da:
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/struttura-sbs.pdf}
-    \caption{Struttura di una \ac{SBS} e interazione tra i vari sistemi integrati}
+    \caption{Struttura di una SBS e interazione tra i vari sistemi integrati}
     \label{fig:sbs}
 \end{figure}
 
@@ -82,7 +82,7 @@ Dal punto di vista tecnico, ogni \ac{SBS} è composta da:
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/architetturaSBS_SAP.pdf}
-    \caption{Struttura di una \ac{SBS} che interagisce con un \ac{ERP} di SAP}
+    \caption{Struttura di una SBS che interagisce con un ERP di SAP}
     \label{fig:sbs-sap}
 \end{figure}
 
@@ -97,8 +97,8 @@ attraverso due diversi livelli:
     o database aziendale con il quale interagiscono:
     \begin{itemize}
         \item scenario SAP: i due layer API REST e sub-service sono gestiti da \ac{ESI} per SAP.
-        In questo scenario il sub-service layer è costituito da BAPI, RFC e FM, oltre a servizi REST
-        che interagiscono con la base dati dell'\ac{ERP} di SAP;
+        In questo scenario, il sub-service layer è costituito da BAPI, RFC e FM, ovvero moduli di funzione SAP
+        che consentono l'integrazione e l'interazione con l'\ac{ERP}, oltre a servizi REST che accedono alla base dati;
         \item scenario non-SAP: i due layer API REST e sub-service sono gestiti dalla versione
         di \ac{ESI} non-SAP. In questo scenario il sub-service layer è costituito da servizi che
         interagiscono con un database relazionale.
