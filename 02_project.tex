@@ -19,19 +19,20 @@ riflettono entità reali, ad esempio cliente, prodotto, ordine, consegna, includ
 (es. nell’ordine ci sono numero ordine, stato, riferimento ai prodotti). Questi oggetti, modellati in modo chiaro,
 facilitano la gestione e l’integrazione dei processi aziendali, fungendo da base per la progettazione delle \ac{PBC}.
 
-Per analizzare e modellare questi elementi, viene applicato il \textbf{Domain Driven Design}\cite{evans2004domain}, un metodo che consente di
+Per analizzare e modellare questi elementi, viene applicato il \textbf{Domain Driven Design} \cite{evans2004domain}, un metodo che consente di
 suddividere il dominio aziendale in \textbf{Bounded Contexts} distinti. Ogni contesto rappresenta un sottoinsieme indipendente
 e ben definito del dominio, facilitando la gestione e l’organizzazione dei processi.
 
-All’interno di ciascun Bounded Context, gli oggetti di business vengono implementati come \textbf{\ac{PBC}}.
+All’interno di ciascun Bounded Context, gli oggetti di business vengono implementati come \textbf{\ac{PBC}}
+\footnote{\url{https://openai.com/chatgpt/overview/}}.
 Queste unità modulari e riutilizzabili rappresentano specifiche entità aziendali che racchiudono in sé i dati e le azioni che
 si possono compiere su di esse in un formato indipendente e facilmente integrabile. Come schematizzato nella Figura \ref{fig:pbc-struttura}
-e nell’esempio in Figura \ref{fig:composable-process}, ciascuna \ac{PBC} descritta nelle ricerche di \textit{Gartner}\cite{natis2019innovation}\cite{burke2020top} include:
+e nell’esempio in Figura \ref{fig:composable-process}, ciascuna \ac{PBC} descritta nelle ricerche di \textit{Gartner} \cite{natis2019innovation} include:
 
 \begin{itemize}
-    \item una \textbf{struttura dati} per rappresentare le informazioni associate alla \ac{PBC},
-    \item un insieme di \textbf{API} di base per eseguire azioni sincrone sull'oggetto,
-    \item un insieme di \textbf{eventi} di base per l'integrazione asincrona,
+    \item una \textbf{struttura dati} per rappresentare le informazioni associate alla \ac{PBC};
+    \item un insieme di \textbf{API} di base per eseguire azioni sincrone sull'oggetto;
+    \item un insieme di \textbf{eventi} di base per l'integrazione asincrona;
     \item una o più \textbf{interfacce utente} (opzionale).
 \end{itemize}
 
@@ -43,13 +44,13 @@ e nell’esempio in Figura \ref{fig:composable-process}, ciascuna \ac{PBC} descr
 \end{figure}
 
 Questa struttura consente di progettare \textbf{applicazioni componibili}, assemblate combinando \ac{PBC} esistenti o sviluppandone di nuove.
-Secondo \textit{Gartner}, tale approccio accelera il time-to-market, migliora l’adattabilità ai cambiamenti e garantisce soluzioni coerenti
+Secondo \textit{Gartner} \cite{burke2020top}, tale approccio accelera il time-to-market, migliora l’adattabilità ai cambiamenti e garantisce soluzioni coerenti
 con le esigenze operative dei clienti. Le applicazioni componibili sono progettate per richiamare dinamicamente i servizi dei
 sistemi sottostanti, adottando un modello di integrazione process-centric, dove i processi di business guidano l’organizzazione
 anziché i dati o le singole applicazioni. Questo tipo di applicazioni hanno una struttura che distingue chiaramente due livelli:
 
 \begin{itemize}
-    \item \textbf{frontend}, focalizzato sull’esperienza utente (UX) e costruito con interfacce intuitive,
+    \item \textbf{frontend}, focalizzato sull’esperienza utente (UX) e costruito con interfacce intuitive;
     \item \textbf{backend}, dedicato alla logica applicativa, implementato tramite \ac{PBC} indipendenti.
 \end{itemize}
 
@@ -70,7 +71,7 @@ Nel corso del tempo, nonostante gli sforzi per migliorare l’organizzazione e i
 emerse difficoltà nel gestire contemporaneamente tutti i progetti. Questi ultimi si dividono in due principali categorie:
 
 \begin{itemize}
-    \item \textbf{progetti esterni}: soluzioni sviluppate per i clienti, denominate \ac{SBS},
+    \item \textbf{progetti esterni}: soluzioni sviluppate per i clienti, denominate \ac{SBS};
     \item \textbf{progetti interni}, suddivisi ulteriormente in due tipologie:
         \begin{itemize}
             \item \textbf{ricerca e sviluppo}: attività principale è l'aggiornamento continuo delle \ac{PBC} per integrarle
@@ -88,8 +89,9 @@ competenze sono concentrate in poche persone esperte e il coinvolgimento di riso
 che spesso vengono percepiti come un rallentamento delle attività.
 
 Per affrontare queste problematiche, l’azienda ha deciso di uniformare il più possibile la gestione dei progetti, adottando un approccio standardizzato
-per l’intero ciclo di vita. Basandosi sui principi del \textbf{\ac{PMBOK}}\cite{project2021guide}, i project manager hanno quindi elaborato lo schema
-del ciclo di vita ideale di un progetto in \textit{Peer Network}, riportato in Figura \ref{fig:fasi-progettuali}. Le future modifiche nella gestione dovranno
+per l’intero ciclo di vita. I project manager, ispirandosi ai principi del \textbf{\ac{PMBOK}} \cite{project2021guide} e adattandoli alla metodologia Agile
+\cite{beck2001agile}, che intendono applicare a tutti i progetti, hanno definito uno schema ideale
+del ciclo di vita di un progetto in \textit{Peer Network}, illustrato in Figura \ref{fig:fasi-progettuali}. Le future evoluzioni nella gestione dovranno
 progressivamente allinearsi a questo modello.
 
 Il ciclo di vita del progetto è stato suddiviso in tre fasi principali. La prima, denominata “Idea, Design, Economics”, prevede l’analisi iniziale di un
@@ -105,9 +107,10 @@ post-installazione e le attività di manutenzione correttiva per garantire il co
 \end{figure}
 
 Per raggiungere l'obiettivo di migliorare la gestione dei progetti, è innanzitutto fondamentale esaminare in dettaglio tutte le attività svolte nel novembre 2024,
-identificando i problemi riscontrati dai dipendenti in ciascuna fase. Successivamente, basandosi sulle linee guida del \ac{PMBOK} e tenendo conto delle specifiche
+identificando i problemi riscontrati dai dipendenti in ciascuna fase. Successivamente, oltre alla
+consultazione di fonti di riferimento nel settore, all’esperienza maturata in altri contesti lavorativi e tenendo conto delle specifiche
 esigenze aziendali, vengono proposti deliverables mirati, come schemi, analisi e documenti, per affrontare e risolvere le criticità emerse. Qualora alcune proposte
-non risultassero applicabili per ragioni aziendali, vengono fornite spiegazioni che giustificano le decisioni adottate. Tutte queste informazioni vengono riportate
+non risultassero applicabili per ragioni aziendali, vengono fornite spiegazioni che giustificano le decisioni adottate. Tutte queste informazioni vengono approfondite
 nel Capitolo \ref{chap:pm}.
 
 \section{Peer Network Activity Management}
@@ -134,7 +137,7 @@ Questo processo risultava troppo dispendioso in termini di tempo ed era basato s
 Le attività e il loro ordine di esecuzione sono schematizzate nella Figura \ref{fig:fatturazione}.
 
 A partire da ottobre 2024, è stata resa disponibile la prima versione del sistema, che consente di completare l’intero flusso dal passaggio “estrazione dati
-per PM” alla “generazione dei rapportini,” in poche ore anziché nelle circa due settimane precedentemente necessarie. L’utilizzo dei fogli elettronici da creare,
+per PM” alla “generazione dei rapportini”, in poche ore anziché nelle circa due settimane precedentemente necessarie. L’utilizzo dei fogli elettronici da creare,
 modificare o importare è stato completamente eliminato: l’intero processo è ora gestito dal gestionale, con l’utente che interagisce direttamente tramite un’unica
 interfaccia grafica. L’automazione della fase di estrazione dati è stata resa possibile grazie all’integrazione con Jira\footnote{\url{https://www.atlassian.com/software/jira}},
 uno strumento per la gestione e il monitoraggio dei progetti che consente ai dipendenti di registrare le ore lavorate su ciascun progetto.
