@@ -20,8 +20,8 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     \subsection{Idea, Design, Economics}
     Nella fase iniziale, quando il progetto non è ancora confermato e l'obiettivo è valutare il potenziale interesse
     del cliente, verranno svolte una serie di \textbf{riunioni esplorative con il committente}.
-    Dal momento che in azineda non è presente una figura commerciale, durante gli incontri sarà il CEO ad occuparsi
-    di convincere il cliente ad acquistare un nuovo sistema. Le conversazioni
+    Dal momento che in azienda non è presente una figura commerciale, durante gli incontri sarà il CEO ad occuparsi
+    della trattativa con il cliente per l'acquisto del nuovo sistema. Le conversazioni
     possono includere la visione di alcuni mockup o presentazioni per dare un'idea preliminare delle soluzioni realizzabili.
 
     Quando un cliente decide di avviare un nuovo progetto, viene assegnato un project manager di riferimento.
@@ -30,7 +30,7 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     Questo confronto permette di chiarire gli obiettivi e definire una base solida per la gestione complessiva.
 
     Successivamente si passa a \textbf{incontri più strutturati con il cliente} per approfondire le idee, definire gli obiettivi
-    e individuare le aree di maggiore interesse. A queste riunioni di approfondimento partecipano sia il CEO che il project
+    e individuare le aree di maggiore interesse. A queste riunioni partecipano sia il CEO che il project
     manager, utilizzando mockup più dettagliati per affinare le specifiche e garantire una visione chiara del progetto.
 
     Man mano che si svolgono le riunioni, le informazioni raccolte vengono inserite e aggiornate nei documenti Confluence,
@@ -38,8 +38,9 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     congiuntamente dal CEO e dal project manager, garantendo una documentazione chiara e sempre aggiornata.
 
     \subsection{Progetto Software}
+    In seguito alla firma del contratto, possono prendere il via tutte le attività interne di progettazione e operatività necessarie per l'implementazione della soluzione.
+    
     \subsubsection{Avvio}
-
     Subito dopo aver concordato con il cliente le specifiche del progetto, viene individuata la persona responsabile
     della gestione operativa, il \textbf{team leader}, il quale ha il compito di coordinare le attività tecniche di sviluppo.
 
@@ -50,7 +51,8 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     project manager e CEO, così da chiarire eventuali dubbi emersi dopo l’analisi della documentazione e definire gli aspetti principali del progetto.
 
     In incontri successivi, il project manager e il team leader \textbf{analizzano i rischi} suddividendoli in diverse categorie: tecnici,
-    di project management, organizzativi ed esterni. Per quelli legati alla sicurezza informatica, si utilizza il modello STRIDE illustrato precedentemente.
+    di project management, organizzativi ed esterni. Per quelli legati alla sicurezza informatica, si utilizza il modello STRIDE illustrato precedentemente
+    nel Paragrafo "Analisi rischi" \ref{para:risks}.
     L’impatto e la probabilità di ogni rischio vengono classificati attraverso la matrice di rischio, suddivisa nei tre livelli: basso, medio e alto.
 
     Per quanto riguarda la \textbf{definizione delle risorse umane necessarie}, si identificano sin da subito le figure professionali richieste
@@ -75,8 +77,12 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     Per definire standard aziendali condivisi, i quali servono a garantire coerenza e qualità nel lavoro di tutti, sarà necessario
     svolgere una \textbf{riunione sulle linee guida per gli sviluppatori} il prima possibile, nella quale si parlerà di:
     \begin{itemize}
-        \item \textbf{convenzioni tecniche}, tra cui la nomenclatura di commit, branch e altre pratiche di versione del codice;
-        \item \textbf{documentazione del codice}, con particolare attenzione alla spiegazione delle logiche complesse adottate;
+        \item \textbf{convenzioni tecniche}, tra cui la nomenclatura di commit, branch e altre pratiche per il controllo della versione
+        del codice;
+        \item \textbf{documentazione del codice}, deve essere integrata direttamente nel file sorgente e posizionata
+        in corrispondenza delle sezioni in cui sono state implementate logiche particolarmente complesse. L'obiettivo è fornire
+        spiegazioni chiare che aiutino a comprenderne il funzionamento, specialmente dove la sola lettura del codice non sarebbe
+        sufficiente a renderne immediatamente chiaro il comportamento;
         \item aggiornamento costante della \textbf{documentazione di progetto}, includendo qualsiasi modifica significativa,
         ad esempio il cambiamento della struttura dati di una \ac{PBC}.
     \end{itemize}
@@ -85,14 +91,14 @@ con la direzione e i project manager, garantendone una migliore integrazione nel
     registrare le ore impiegate, ciascun dipendente deve modificare lo stato di avanzamento dei compiti svolti e aggiungere
     un riepilogo delle attività svolte nella sezione relativa ai commenti, oltre a eventuali difficoltà riscontrate.
     
-    Tutte le \textbf{scadenze e i rilasci} significativi devono essere inseriti nel documento riepilogativo aziendale
-    dello stato di tutti i progetti. Questo facilita il monitoraggio da parte del responsabile dei project manager e della direzione,
-    garantendo una visione chiara dell’andamento generale.
+    Il project manager deve registrare tutte le \textbf{scadenze e i rilasci} rilevanti di un progetto nel documento aziendale
+    riepilogativo, che traccia lo stato di avanzamento di tutti i progetti. Questo facilita il monitoraggio da parte del
+    responsabile dei project manager e della direzione, garantendo una visione chiara dell’andamento generale.
 
     \subsubsection{Rilascio}
     Dopo ogni rilascio significativo, si organizza una \textbf{riunione retrospettiva interna} con tutto il team di progetto. Questo momento
-    di confronto permette di evidenziare sia gli aspetti positivi, rafforzando la motivazione, soprattutto per i membri meno
-    esperti, sia quelli negativi, offrendo spunti di miglioramento per il futuro.
+    di confronto permette di evidenziare sia gli aspetti positivi, rafforzando la motivazione e validando le pratiche che si sono dimostrate
+    efficaci, soprattutto per i membri meno esperti, sia quelli negativi, offrendo spunti di miglioramento per il futuro.
 
 \begin{figure}
     \centering
@@ -113,8 +119,8 @@ a un progetto simulato.
 Basandosi sul mockup e sulle funzionalità richieste illustrate nel Capitolo \ref{chap:pam}, l’interfaccia permette
 di visualizzare costi, ricavi e margini, sia pianificati che effettivi.
 Alcuni valori pianificati, come il budget (indicato anche come importo del ricavo previsto) e le ore considerate
-come costo interno, vengono inseriti dal project manager nella sezione riguardo le informazioni generali
-del progetto, descritta in precedenza.
+come costo interno, vengono inseriti dal project manager nella sezione riguardante le informazioni generali
+del progetto.
 Il costo standard, utilizzato per il calcolo dei ricavi, si basa sulle tariffe di progetto, definite manualmente all’inizio del
 progetto nella rispettiva sezione.
 Gli altri valori previsionali vengono invece determinati attraverso semplici calcoli basati sui dati già disponibili.
