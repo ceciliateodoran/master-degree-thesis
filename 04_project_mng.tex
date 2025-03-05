@@ -1,27 +1,28 @@
 \chapter{Gestione Progetti}
 \label{chap:pm}
 
-Come già anticipato, questo capitolo approfondisce tutte le attività che costituiscono il ciclo di vita
+Questo capitolo approfondisce tutte le attività che costituiscono il ciclo di vita
 di un progetto di \textit{Peer Network}, dalla fase di ideazione fino al rilascio al cliente e al supporto post-installazione.
 L’analisi condotta ha permesso di individuare criticità lungo il processo e di elaborare proposte mirate alla loro risoluzione.
-
 Nel corso del lavoro, è stato possibile seguire sia progetti già in corso che nuovi, partendo dalle riunioni
 preliminari con i committenti per valutare l’opportunità di sviluppare un nuovo applicativo. Partecipare a incontri
 con i clienti e con i team di progetto ha offerto una visione completa della gestione operativa e del lavoro
 svolto dai diversi dipendenti, in particolare dai responsabili di progetto. Questa esperienza, oltre alla
 consultazione di fonti di riferimento nel settore e all’esperienza maturata in altri contesti lavorativi,
-ha permesso di sviluppare proposte concrete per migliorare i processi, adattandole alle reali esigenze dei
-team senza stravolgerne il metodo di lavoro.
+ha permesso di sviluppare proposte concrete per migliorare il processo.
 
-L'analisi e le proposte sviluppate si basano costantemente sulla struttura del ciclo di vita del progetto proposta dall'azienda
-e illustrata nella Sezione \ref{sec:pm}.
+L'analisi e le proposte sviluppate si basano sulla struttura del ciclo di vita del progetto adottata dall'azienda.
+Di conseguenza, le sezioni e i paragrafi successivi sono organizzati in modo da rispecchiare le fasi e sottofasi illustrate
+nella Sezione \ref{sec:pm}.
 
 \section{Analisi Stato}
-I progetti per clienti esterni possono variare notevolmente in natura e, di conseguenza, nella durata che intercorre tra l’inizio e l'installazione:
+I progetti per clienti esterni possono variare notevolmente per complessità, obiettivi e tecnologie coinvolte, influenzando di conseguenza
+la durata complessiva, dall'avvio all'installazione. In generale, è possibile suddividerli in base al tempo necessario per la loro
+realizzazione, come segue:
 \begin{itemize}
     \item aggiunta di funzionalità a un sistema esistente: da una a più settimane, a seconda della complessità;
     \item creazione di un nuovo applicativo con la maggior parte delle \ac{PBC} già presenti: da uno a diversi mesi;
-    \item migrazione di un \ac{ERP} aziendale (ad esempio, da SAP ECC a SAP S/4HANA), oppure creazione di un nuovo
+    \item migrazione di un \ac{ERP} aziendale (ad esempio, da SAP ECC a SAP S/4 HANA), oppure creazione di un nuovo
     applicativo con numerose \ac{PBC} da sviluppare e/o logiche nuove: oltre tre mesi. I progetti di grandi dimensioni
     vengono suddivisi in sotto progetti, ciascuno della durata massima di tre o quattro mesi, per consentire rilasci graduali stabilendo le priorità.
 \end{itemize}
@@ -37,7 +38,6 @@ Se il committente ha già progetti o collaborazioni attive con l’azienda, la p
 \end{itemize}
 
 Un'ulteriore possibilità riguarda i progetti interni, nei quali non esiste un committente esterno, ma è la \textit{Peer Network} a essere cliente di sé stessa.
-
 Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO, il quale gestisce l'intera fase iniziale del progetto.
 
     \subsection{Idea, Design, Economics}
@@ -57,7 +57,7 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
     ed eventuali periodi in cui non sarà possibile lavorare per necessità aziendali.
 
     Una volta definiti i requisiti e le tempistiche per il completamento del progetto, il CEO redige un’\textbf{offerta} che il cliente
-    accetta. Dopo aver preso in carico il progetto, egli crea uno spazio dedicato su Confluence per i \textbf{documenti interni}, dove
+    deve accettare. Dopo aver preso in carico il progetto, egli crea uno spazio dedicato su Confluence per i \textbf{documenti interni}, dove
     inserisce un riassunto di quanto concordato. Ogni azienda cliente dispone
     di un proprio spazio Confluence personalizzato e condiviso, contenente tutta la documentazione rilevante per i suoi progetti.
     In questa fase iniziale, il CEO si occupa di aggiornare lo spazio con il nuovo progetto.
@@ -109,12 +109,12 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
         Successivamente, il project manager e il CEO organizzano una \textbf{piccola riunione} per presentare il nuovo progetto a un gruppo
         ristretto di persone potenzialmente coinvolte nel team. Questo incontro è raramente condotto in presenza dei clienti. A parte
         il project manager, gli altri membri del gruppo hanno solo una comprensione generale delle aree di intervento, senza che venga designato un team leader o altri ruoli ufficiali.
-        
-        Il project manager è responsabile del \textbf{business case} del progetto, un foglio elettronico in cui viene inserita l'analisi dei \underline{costi}
-        e dei \underline{ricavi pianificati}. Considerando il budget e i tempi concordati con il cliente nella fase iniziale, il compito del project manager
-        è quello di trovare il modo migliore per rimanere all'interno di questi limiti. A tal fine, egli stima il numero di giorni/persona necessari
-        per completare il lavoro e, utilizzando il costo orario di un dipendente, calcola il costo totale interno pianificato. Partendo da queste
-        informazioni e dal budget, si può determinare quanto ricavo e margine sono pianificabili.
+
+        Il project manager è responsabile del \textbf{business case} del progetto, un documento in formato foglio elettronico in cui vengono analizzati i \underline{costi}
+        e i \underline{ricavi pianificati}. L’analisi si basa sul budget e sulle tempistiche concordate con il cliente nella fase iniziale, considerando che,
+        nella maggior parte dei casi, il prezzo del progetto è fisso e stabilito contrattualmente. Per stimare i costi, il project manager calcola il numero di giorni/persona necessari
+        per completare il lavoro e, moltiplicandolo per il costo orario di ciascun dipendente, determina il costo interno totale pianificato.
+        Il suo obiettivo è ottimizzare le risorse per rispettare questi parametri e, possibilmente, migliorare il margine di guadagno.
 
         Deliverables prodotti: business case.
 
@@ -126,12 +126,15 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
             \item la documentazione di progetto relativa a questa fase, in particolare quella riguardo ai requisiti, viene redatta solo sporadicamente.
             Di conseguenza, nelle fasi successive il project manager è sempre costretto a rivolgersi al CEO per ottenere chiarimenti, anche da parte degli sviluppatori;
             \item spesso, non c’è un team di progetto definito, poiché si coinvolgono gli sviluppatori disponibili o adatti ai compiti richiesti in base alle esigenze del momento;
-            \item i ruoli all'interno del gruppo non vengono quasi mai assegnati in modo formale;            
+            \item i ruoli all'interno del gruppo non vengono quasi mai assegnati in modo formale;
+            \item a volte il prezzo concordato con il cliente non riflette pienamente le esigenze che emergono successivamente durante l'analisi del business case.
+            In questi casi, i costi stimati risultano significativamente alti, riducendo il margine di guadagno o, in alcuni casi, richiedendo persino un
+            investimento interno per completare il progetto;
             \item non sono stati stabiliti deliverables standard da produrre in questa fase.
         \end{itemize}
 
         \subsubsection{Pianificazione}
-        Partendo dall’idea e dalle funzionalità, a volte il project manager sviluppa una \textbf{\ac{WBS}}, scomponendo il progetto in
+        Partendo dall’idea e dalle funzionalità, il project manager sviluppa una \textbf{\ac{WBS}}, scomponendo il progetto in
         numerosi elementi organizzati in una gerarchia chiara, simile a un diagramma ad albero. Dallo schema devono emergere chiaramente le
         funzionalità specifiche da sviluppare e i moduli in cui si intende dividere il progetto. Un modulo è definito come un insieme di funzionalità
         coerenti, che possono essere rilasciate in modo indipendente dalle altre, garantendo che ciascun modulo sia autoconclusivo. Idealmente, ogni
@@ -148,13 +151,13 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
             \label{fig:wbs-esismart}
         \end{figure}
 
-        È successo raramente che si effettuasse un'\textbf{analisi dei rischi}, la quale veniva condotta dopo aver scomposto il problema in moduli
-        e relative funzionalità. Questo approccio è stato adottato in progetti in cui si prevedevano significative criticità in alcuni moduli.
-        A seguito dell'analisi, si valutava come mitigare o risolvere il problema, riportando le informazioni al cliente e condividendo una possibile strategia.
+        L'\textbf{analisi dei rischi} è stata condotta raramente e solitamente solo dopo aver suddiviso il problema in moduli
+        e relative funzionalità. Questo approccio è stato adottato nei progetti in cui erano previste criticità significative in specifici moduli.
+        A seguito dell'analisi, si valutava come mitigare o risolvere il problema, riportando le informazioni al cliente e proponendo una possibile strategia.
 
         Per avere una visione complessiva del progetto, il project manager elabora un \textbf{Gantt}, posizionando tutti i moduli da sviluppare all'interno di un
         calendario. Questo processo tiene conto delle scadenze concordate con il cliente e delle dipendenze tra i vari moduli. Non tutti i project manager
-        seguono questa prassi; coloro che lo fanno, utilizzano lo strumento GanttPro\footnote{\url{https://ganttpro.com/it/}}. Talvolta, prima di redigere il Gantt, si crea uno \textbf{schema generale di pianificazione
+        seguono questa prassi; coloro che lo fanno, utilizzano lo strumento GanttPRO\footnote{\url{https://ganttpro.com/it/}}. Talvolta, prima di redigere il Gantt, si crea uno \textbf{schema generale di pianificazione
         rilasci} fino al lancio, privo di date, ma che evidenzia l’ordine dei rilasci (come illustrato nella Figura \ref{fig:schema-rilasci}). In entrambi i casi, la pianificazione
         viene sottoposta a validazione da parte del cliente.
 
@@ -229,7 +232,9 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
         \begin{itemize}
             \item non esiste un template standard della \ac{WBS};
             \item i project manager riscontrano difficoltà nel capire come scomporre e con quale granularità l’idea iniziale in una \ac{WBS} completa;
-            \item la maggior parte delle volte, i project manager non fanno la \ac{WBS} e scompongono il problema direttamente sul relativo progetto Jira;
+            \item la maggior parte delle volte, i project manager non creano la \ac{WBS} e scompongono il problema direttamente sul relativo progetto Jira. La
+            decisione di svilupparla o meno dipende da valutazioni personali anziché su un criterio predefinito. In alcuni casi, viene percepita come un’attività
+            non essenziale o troppo dispendiosa in termini di tempo;
             \item non tutti i project manager utilizzano il diagramma di Gantt;
             \item nelle epic, user stories, task e subtask non sempre vengono fornite descrizioni o link a documenti pertinenti con spiegazioni più dettagliate;
             \item esiste una notevole confusione riguardo all'organizzazione di un progetto su Jira in epic, task e subtask e
@@ -249,7 +254,7 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
 
         \subsubsection{Esecuzione}
         La \textbf{programmazione} è l’organizzazione delle attività su un orizzonte temporale breve. Questa viene fatta settimanalmente dal project manager assegnando
-        task e subtask raffinati ai dipendenti specifici. Ogni venerdì, il responsabile tecnico dell’azienda controlla che nella settimana successiva tutti gli
+        task e subtask raffinati a dipendenti specifici. Ogni venerdì, il responsabile tecnico dell’azienda controlla che nella settimana successiva tutti gli
         sviluppatori siano occupati in attività e che tutti i task e subtask programmati per quel periodo siano assegnati a persone reali (quindi non siano più
         assegnati a risorse generiche). Nella Figura \ref{fig:programmazione-jira-progetto} c'è una visione dello schema Gantt del plugin Team Board su Jira, dove si vede la programmazione effettiva.
         Visto che ad ogni persona vengono assegnati più task e subtask da sviluppare, è suo compito registrare le ore di lavoro che impiega per ciascuno,
@@ -270,7 +275,7 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
 
         Il \textbf{rilascio del software} avviene esclusivamente in modo manuale, poiché non sono presenti meccanismi automatizzati come \textbf{continuous integration}
         o \textbf{continuous delivery}. Questa modalità dipende dall'attuale configurazione, in cui le repository di progetto risiedono su Bitbucket, una piattaforma
-        in cloud, e l’accesso alle macchine virtuali dei clienti richiede l’utilizzo della VPN. Al momento, non sono state individuate soluzioni per superare le limitazioni
+        in cloud, e l’accesso alle macchine virtuali dei clienti richiede l’utilizzo della VPN. Al momento, in azienda non sono state individuate soluzioni per superare le limitazioni
         legate all'accesso alle macchine virtuali tramite Bitbucket.
 
         Per quanto riguarda il \textbf{workflow di rilasci e test prima del rilascio in produzione}, il processo inizia nell'\underline{ambiente di sviluppo}, noto come DEV.
@@ -298,10 +303,13 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
         creato un documento su Confluence che spiega il problema e la relativa soluzione. Questo documento sarà accessibile a chiunque, così che possa essere utilizzato quando si presenterà un problema simile.
         In ogni caso, c'è sempre una collaborazione attiva tra tutti i dipendenti dell’azienda, in caso di necessità.
 
-        All'inizio di progetti di grandi dimensioni, o in quelli che coinvolgono nuovi membri, si tiene al mattino uno \textbf{stand up meeting} informale di dieci minuti.
+        All'inizio di progetti di grandi dimensioni, o in quelli che coinvolgono nuovi membri, si tiene al mattino uno \textbf{stand-up meeting} informale di dieci minuti.
         Durante questa breve riunione, i partecipanti discutono i problemi emersi il giorno precedente e possono richiedere supporto per la giornata corrente. Alcuni
-        progetti si prestano naturalmente a questo tipo di incontro, mentre altri potrebbero non essere adatti. La necessità di un stand up meeting dipende anche
-        dalla dinamica del team: se i membri sono molto affiatati, esiste già un'intesa e un metodo di lavoro consolidato. Inoltre, la durata del progetto influisce
+        progetti si prestano naturalmente a questo tipo di incontro, mentre altri potrebbero non essere adatti.
+        La necessità di uno stand-up meeting dipende anche dalla dinamica del team: non è necessaria se i membri sono molto affiatati, esiste già un'intesa
+        solida e un metodo di lavoro consolidato. In questi casi, alla base della loro collaborazione c’è una forte fiducia reciproca e una comunicazione efficace
+        che avviene in modo naturale durante tutto il lavoro. Gli incontri quotidiani risulterebbero superflui e ridondanti, dal momento che il
+        coordinamento avviene già in modo fluido. Inoltre, anche la durata del progetto influisce
         sulla necessità di questa breve riunione, poiché per progetti di poche settimane, un incontro quotidiano potrebbe non essere necessario.
 
         Per un efficace \textbf{monitoraggio economico} del progetto, è fondamentale controllare sistematicamente il business case su base mensile.
@@ -344,15 +352,21 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
             \item settimanali: per moduli di piccole dimensioni;
             \item bisettimanali: per moduli che richiedono un'analisi aggiuntiva;
             \item mensili: per moduli che necessitano di una quantità significativa di test.
-        \end{itemize}  
+        \end{itemize}
         
         In produzione è possibile rilasciare solo un modulo completo, comprendente di frontend, \ac{ESI} e backend correlati, affinché sia completamente funzionante.
         All'inizio di un nuovo progetto, il primo componente ad essere caricato in produzione è \ac{ESI} contenente le \ac{PBC} core, poiché comprendono
         tutte le funzionalità di utilità base necessarie per il corretto funzionamento generale del sistema.
         Il rilascio del software avviene esclusivamente in modo manuale, come descritto nella fase precedente.
         
-        Generalmente, il \textbf{termine di un progetto} non è gestito in modo convenzionale, poiché non presenta una vera e propria conclusione. Infatti, c'è un continuo
-        supporto e servizio di assistenza, come spiegato meglio nella fase successiva. Un progetto si considera concluso solo quando l'azienda cliente smette di utilizzare l'applicazione.
+        Dal momento che \textit{Peer Network} opera principalmente su progetti software legati alla re-ingegnerizzazione di processi aziendali, è stato deciso che il \textbf{termine di un progetto}
+        non segue un approccio tradizionale. Ogni software sviluppato è considerato un sottoprogetto di un ecosistema più ampio e contribuisce all’ottimizzazione
+        di un processo, rendendo la conclusione dei progetti meno netta. Sebbene ogni sottoprogetto abbia un inizio e una fine definiti, l’intero
+        processo continua a evolversi attraverso attività di manutenzione, supporto e assistenza, come approfondito nella fase successiva. Un progetto software
+        si considera realmente concluso solo quando l'applicazione prodotta non viene più utilizzata. Tuttavia, per garantire una gestione aziendale più strutturata
+        e avere riferimenti temporali chiari, ad esempio per il controllo economico, il monitoraggio di un software già installato viene organizzato
+        su base annuale, semestrale o trimestrale.
+        
         Per quanto riguarda un progetto di migrazione, la conclusione del progetto è necessaria, in quanto coincide con il completamento del passaggio al nuovo sistema.
         In questo contesto di migrazione, viene organizzata una \textbf{retrospettiva
         interna} dedicata principalmente al team di progetto. La \textbf{retrospettiva con il cliente}, invece, viene effettuata solo su richiesta del committente stesso o quando è
@@ -411,13 +425,13 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
 
     Problemi riscontrati:
     \begin{itemize}
-        \item il team si trova in difficoltà nel comprendere dove e come intervenire, a causa di:
+        \item il team si trova in difficoltà nel comprendere dove e come intervenire per le seguenti cause:
             \begin{itemize}
-                \item la documentazione del codice (Javadoc) è quasi inesistente e il codice stesso è poco commentato (spiegazione di logiche complesse);
+                \item la documentazione del codice (Javadoc) è quasi inesistente e il codice stesso è poco commentato (manca la spiegazione delle logiche complesse);
                 \item la documentazione di progetto è caotica e insufficiente.
             \end{itemize}
         \item ci sono numerosi ritardi nelle consegne, poiché spesso si stima che la risoluzione di un task richieda poco tempo,
-        ma poi si scopre codice poco manutenibile e debito tecnico, per colpa di:
+        ma poi si scoprono codice poco manutenibile e debito tecnico, le cui cause possono essere:
             \begin{itemize}
                 \item il sistema del cliente è obsoleto e non è stato aggiornato in concomitanza con le modifiche non retrocompatibili effettuate nel corso degli anni;
                 \item il codice del progetto è spesso di scarsa qualità, perché chi lo ha scritto non aveva esperienza nel momento dello sviluppo e non è stato adeguatamente sorvegliato.
@@ -427,6 +441,13 @@ Nel caso di clienti esterni, tutte le richieste vengono sempre inoltrate al CEO,
     \end{itemize}
 
 \section{Soluzioni Proposte}
+Per sviluppare proposte concrete di miglioramento, adattate alle esigenze dei team senza stravolgerne il metodo di lavoro, si è preso
+spunto da diverse fonti teoriche e dall’esperienza maturata in altri contesti lavorativi. In particolare, per le buone pratiche generali
+di gestione dei progetti, sono stati consultati la guida \ac{PMBOK} \cite{project2021guide}, "Effective Project Management: Traditional, Agile, Extreme"
+\cite{wysocki2011effective} e "Software Project Management: Methods and Techniques" \cite{Peters20241}. Per gli aspetti più specifici della
+gestione Agile, invece, sono stati presi in considerazione "The Software Project Manager’s Bridge to Agility" \cite{sliger2008software} e
+"Agile Practice Guide" \cite{project2017agile}.
+
 Riorganizzare la gestione dei progetti permetterà di migliorare la qualità
 del lavoro e ottimizzare i tempi. Attualmente, l'assenza di documentazione scritta porta a una perdita di tempo significativa, poiché
 le informazioni devono essere richieste verbalmente, con il rischio di dimenticanze e incomprensioni. Questo problema si manifesta tanto
@@ -435,7 +456,7 @@ nella comunicazione tra sviluppatori e project manager quanto in quella tra proj
 Per garantire un aggiornamento costante della \textbf{documentazione}, sia gestionale che tecnica, è essenziale strutturare lo spazio Confluence dedicato,
 creando un documento specifico per ogni schema, diagramma, report di riunione o altro file rilevante. Ogni documento dovrà essere aggiornato a ogni
 modifica decisa, assicurando così un allineamento continuo nel tempo. A questo scopo, è utile adottare una struttura organizzata delle cartelle,
-ad esempio in Figura \ref{fig:doc-progetto},
+un esempio in Figura \ref{fig:doc-progetto},
 con una numerazione che indica l’ordine consigliato per la creazione e la consultazione dei file, facilitando così una visione d’insieme
 chiara e coerente.
 
@@ -447,7 +468,7 @@ documentazione. Per una consultazione più immediata, la lavagna digitale può e
 rendendo l’accesso rapido e strutturato.
 
 Considerando che molti progetti condividono caratteristiche con applicativi preesistenti, una volta completata correttamente la
-documentazione per un’iniziativa, è possibile riutilizzarla come base per i successivi progetti. Copiando e adattando documenti 
+documentazione per un’iniziativa, è possibile riutilizzarla come base per i successivi progetti. Copiando e adattando documenti e
 schemi già strutturati, si velocizza l’intero processo, riducendo il tempo necessario per la preparazione della documentazione.
 
 \begin{figure}
@@ -457,19 +478,18 @@ schemi già strutturati, si velocizza l’intero processo, riducendo il tempo ne
     \label{fig:doc-progetto}
 \end{figure}
 
-Per la gestione del \textbf{Project Management Life Cycle}, si consiglia un approccio Agile \cite{project2017agile}
-\cite{sliger2008software} \cite{Peters20241} \cite{beck2001agile} \cite{wysocki2011effective}
-iterativo basato su Kanban, poiché garantisce
+Per la gestione del \textbf{Project Management Life Cycle}, si consiglia un approccio Agile iterativo basato su Kanban, poiché garantisce
 la flessibilità necessaria per il metodo di sviluppo di \textit{Peer Network}, oltre ad adattarsi al rilascio dei moduli.
 Inoltre, Kanban è il framework utilizzato all’interno di Jira, strumento già utilizzato per l’organizzazione del lavoro. L’obiettivo è
 completare i moduli nel minor tempo possibile, cercando di anticipare le date concordate per i vari rilasci. Parallelamente, si
 punta a coinvolgere maggiormente il cliente nei test, favorendo un ciclo di feedback continuo. Per queste ragioni,
 l’adozione di un metodo di gestione tradizionale non risulterebbe adeguata. Il framework Scrum è stato utilizzato in passato su progetti di
 grandi dimensioni, gestiti da project manager diversi, seguendo scrupolosamente tutte le indicazioni previste dalla metodologia.
+
 Tuttavia, l’esperienza ha evidenziato alcune criticità: la produzione di documentazione all’inizio e alla fine di ogni sprint,
 insieme alle retrospettive con il cliente, ha richiesto un impegno eccessivo, sottraendo tempo prezioso allo sviluppo effettivo.
 Entrambi i project manager hanno quindi ritenuto che lo sforzo non fosse giustificato dai benefici ottenuti. Inoltre, l’adozione
-di Scrum è stata possibile solo con quegli specifici clienti, poiché erano disposti a partecipare attivamente a frequenti riunioni di
+di Scrum è stata possibile solo con specifici clienti, poiché erano disposti a partecipare attivamente a frequenti riunioni di
 allineamento. La maggior parte degli altri committenti, invece, preferisce un approccio meno coinvolgente, ritenendo che, una volta
 commissionato un sistema, debba essere l’azienda sviluppatrice a gestire completamente il progetto senza richiedere un’interazione
 continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di \textit{Peer Network}.
@@ -530,6 +550,10 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
         \end{itemize}
 
     \subsection{Progetto Software}
+    L'analisi e la progettazione dettagliata possono iniziare solo dopo l'accettazione e la firma del contratto da parte
+    del cliente, coinvolgendo inizialmente il team leader. Man mano che si procede con la pianificazione e lo sviluppo
+    del software, vengono inseriti anche gli altri membri del team.
+
         \subsubsection{Avvio}
             \paragraph{Riunione di allineamento}
             La riunione ha l’obiettivo di introdurre e allineare il team leader. Sono
@@ -575,7 +599,7 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
                 \caption{Parte dell'analisi dei rischi tecnici}
                 \label{fig:risks}
             \end{figure}
-            \paragraph{Analisi rischi}
+            \paragraph{Analisi rischi}\label{para:risks}
             L’analisi dei rischi è necessaria per individuare le possibili criticità e definire strategie di mitigazione o prevenzione.
             Inoltre, risulta fondamentale per stabilire il livello di sicurezza tecnica da applicare, in linea con l’obiettivo
             aziendale di rafforzare la sicurezza delle proprie soluzioni. Questo processo deve coinvolgere più persone, così da
@@ -597,8 +621,9 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
             complessivo si ottiene moltiplicando i due fattori e classificando il risultato secondo tre fasce di rischio:
             basso (1-2), medio (3-4) e alto (6-9).
 
-            Per affrontare i rischi tecnici di sicurezza, \textit{Peer Network} ha deciso di adottare le linee guida di Intesys\footnote{\url{https://www.intesys.it/information-technology/metodologia-e-approccio/sviluppo-codice-sicuro/}}
-            descritte nel documento “Sviluppo di codice sicuro”. In questo contesto, viene utilizzato il modello STRIDE,
+            Per affrontare i rischi tecnici di sicurezza, \textit{Peer Network} ha deciso di adottare le linee guida di Intesys
+            descritte nel documento “Sviluppo di codice sicuro” \footnote{\link{https://www.intesys.it/information-technology/metodologia-e-approccio/sviluppo-codice-sicuro/}{https://www.intesys.it/sviluppo-codice-sicuro/}}.
+            In questo contesto, viene utilizzato il modello STRIDE,
             sviluppato da Microsoft, per identificare e classificare le principali minacce alla sicurezza di un sistema.
             Questo framework suddivide le vulnerabilità in sei categorie: Spoofing, Tampering, Repudiation, Information
             Disclosure, Denial of Service ed Elevation of Privilege, coprendo un’ampia gamma di potenziali problemi.
@@ -632,7 +657,7 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
         \subsubsection{Pianificazione}
             \paragraph{Riunioni operative interne}
             Le riunioni operative interne coinvolgono il project manager, il team leader e, per progetti superiori alle tre
-            settimane, anche le figure con esperienza. Durante questi incontri, il gruppo lavora per scomporre il
+            settimane, anche sviluppatori con esperienza. Durante questi incontri, il gruppo lavora per scomporre il
             progetto in attività più dettagliate, creando una \ac{WBS} di livello logico. Successivamente,
             si procede con la stima della durata delle singole attività e l’identificazione delle dipendenze tra di esse.
             Infine, si pianifica il progetto delineando le scadenze generali per il
@@ -670,7 +695,7 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
             Il diagramma di Gantt consente di visualizzare in modo chiaro la pianificazione di un progetto, evidenziando
             attività, scadenze e relazioni tra le varie fasi. Inizialmente, la struttura del progetto viene definita a
             livello logico su Gantt, per poi essere implementata su Jira. Per la creazione del diagramma si può ricorrere
-            a GanttPro, ma un’alternativa valida è sfruttare la Timeline di Jira, organizzando la pianificazione sulle epic,
+            a GanttPRO, ma un’alternativa valida è sfruttare la Timeline di Jira, organizzando la pianificazione sulle epic,
             così da mantenere l’intero processo all’interno della stessa piattaforma (esempio in Figura \ref{fig:timeline-nuovo}).
 
             \begin{figure}
@@ -733,9 +758,10 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
                 le pratiche siano seguite correttamente;
                 \item documentazione di progetto: i file di progetto su Confluence devono essere costantemente aggiornati, in modo che tutti
                 abbiano accesso alle informazioni più recenti;
-                \item documentazione del codice:
+                \item documentazione del codice: è necessario introdurre regole per produrre la corretta spiegazione del codice prodotto,
+                suddividendola in due tipologie:
                 \begin{itemize}
-                    \item Javadoc per esterni: ogni funzione e file devono essere corredati da una descrizione in inglese che spieghi
+                    \item Javadoc per esterni: ogni funzione e file devono essere corredati da una descrizione che spieghi
                     il funzionamento del codice, i parametri in input e i valori restituiti.
                     Queste informazioni devono seguire lo standard Javadoc\footnote{\url{https://www.oracle.com/java/technologies/javase/javadoc-tool.html}};
                     \item commenti interni nel codice: è importante includere spiegazioni dettagliate delle logiche più complesse
@@ -755,7 +781,7 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
                     Devono partecipare il project manager e gli sviluppatori, così da confrontarsi sul lavoro svolto e l'organizzazione utilizzata.
                 \end{itemize}
                 \item monitoraggio di criticità e problemi: ogni volta che si presenta un problema, deve essere documentato in Confluence,
-                inserito in una tabella e seguito da un confronto: se il problema è di entità minore, il team può discuterne in riunioni
+                inserito in una tabella e seguito da un confronto. Se il problema è di entità minore, il team può discuterne in riunioni
                 interne; mentre, se il problema è significativo, il project manager deve avviare un incontro con il committente, dato che
                 la decisione finale dipende dal cliente;
                 \item gestione delle comunicazioni:
@@ -777,7 +803,7 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
         
         \subsubsection{Rilascio}
             \paragraph{Test automatici}
-            Alcuni tipi di test che potrebbero essere inseriti, in base alla tipologia di soluzioni sviluppate dall’azienda:
+            Di seguito sono riportati alcuni tipi di test che l'azienda potrebbe introdurre, selezionati in base alla tipologia di soluzioni sviluppate:
             \begin{itemize}
                 \item regressione: per verificare che nuove modifiche al software, come aggiornamenti o correzioni di bug, non abbiano
                 introdotto errori in altre parti del sistema;
@@ -787,8 +813,8 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
                 \item integrazione: verificano che i diversi moduli o componenti del software funzionino correttamente insieme.
             \end{itemize}
             
-            \paragraph{Riunioni di retrospettiva post-installazione completata}
-            Al termine dello sviluppo di un sistema e dell'installaizione finale presso il cliente, sarebbe importante svolgere:
+            \paragraph{Riunioni di retrospettiva post-installazione}
+            Al termine dello sviluppo di un sistema e dell'installazione finale presso il cliente, sarebbe importante svolgere:
             \begin{itemize}
                 \item una riunione interna: l'incontro serve per analizzare insieme cosa ha funzionato bene e cosa può essere migliorato,
                 in modo da ottimizzare i processi per i futuri progetti;
@@ -798,7 +824,8 @@ continua. Questo rende Scrum difficilmente applicabile nel contesto operativo di
             \end{itemize}           
 
     \subsection{Supporto e Servizio}
-    Il lavoro del team di supporto dovrebbe risultare più semplice grazie alle migliorie introdotte nelle fasi precedenti.
+    Dal momento che le modalità di assistenza e manutenzione sono le stesse per tutti i clienti,
+    il lavoro del team di supporto dovrebbe risultare più semplice grazie alle migliorie introdotte nelle fasi precedenti.
     La manutenzione del codice è ottimizzata, la documentazione tecnica e di progetto è aggiornata e il codice stesso
     è corredato da commenti chiari, garantendo così una gestione più efficiente e strutturata.
     
